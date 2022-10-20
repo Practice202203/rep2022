@@ -1,0 +1,72 @@
+/* Контейнер продукта */
+.container-product {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+  }
+
+  /* Общее правило для левой стороны  */
+.left-column {
+    width: 65%;
+    position: relative;
+  }
+/* Общее правило для правой стороны */
+  .right-column {
+    width: 35%;
+    margin-top: 60px;
+  }
+
+  /* Изображение */
+.left-column img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+
+  /* Общее описание продукта */
+.product-name {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  
+/* Название продукта */
+  .product-name h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+      
+/* Технические характеристики продукта */      
+  }
+  .product-description p {
+    font-size: 25px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+
+  /* Ссылки на продукт */ 
+.product-links{
+    margin: 20px 0;
+}
+/* Количество продукта */ 
+  .product-count {
+	font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+/* Кнопка у продукта */ 
+.product-button {
+   font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px; 
+}

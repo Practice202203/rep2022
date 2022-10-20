@@ -1,0 +1,338 @@
+/* Подключение шрифта для сайта */
+@font-face {
+    font-family: "Header";
+    src: local("Header"),
+        url("../fonts/Roboto-Condensed.ttf") format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* END */
+
+
+/* Общие правила для сайта */ 
+html,
+body {
+    margin: 0;
+    /* NEW */
+    font-size: 20px;
+    font-family: "Header";
+    /* END */
+    overflow-x: hidden;
+}
+
+/* Общие правила для ссылок */
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+/* Градиентная заливка для заголовка сайта */
+.header {
+    background-image: linear-gradient(315deg, #36096d 0%, #37d5d6 74%);
+    padding: 35px 0;
+}
+
+/* Правило для логотипа сайта */
+.logo {
+    background-size: cover;
+}
+
+/* Правила для контейнера заголовка сайта */
+.container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+/* Правая часть с поисковой строкой */ 
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+}
+
+/* Ссылка на вход с формой */ 
+.header-right-form a {
+    font-family: "Header";
+    align-items: center;
+    color: white;
+    margin-left: 200px;
+
+}
+
+/* Поисковая строка */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 270px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    padding-left: 5px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+/* Правила для всех input`ов */
+input {
+    outline: 0;
+    border: none;
+    background: none;
+}
+
+/* Внутренняя область поисковый строки */ 
+.search-input {
+    color: #111;
+    width: 90%;
+    height: 100%;
+    font-size: 14px;
+}
+ /* Правила для разных браузеров */ 
+::-webkit-input-placeholder {
+    color: #111
+}
+
+:-moz-placeholder {
+    color: #fff
+}
+
+::-moz-placeholder {
+    color: #fff
+}
+
+:-ms-input-placeholder {
+    color: #fff
+}
+
+/* Привило для кнопки в поисковой строке */
+.search-i {
+    color: #111;
+}
+
+
+/* Общее правило для меню */
+.menu {
+    height: 60px;
+}
+
+/* Положение кнопки Каталог */
+.menu__container {
+    position: relative;
+}
+
+/* Общие правила для иконки возле Каталога */
+.catalog_icon {
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Составные элементы иконки */
+.catalog_icon_i {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 0 1px;
+    transition: transform .3s, background-color .3s;
+    background-color: #000;
+
+}
+
+/* Отступы составных элементов иконки */
+.catalog_icon_i:not(:first-child) {
+    margin-top: 3px;
+}
+
+/* Главная кнопка Каталог */
+.catalog {
+    position: absolute;
+    width: 260px;
+    top: 0;
+    background-color: #fff;
+}
+
+/* Привила для внутренней ннопки Каталог */
+.catalog__header {
+    font-size: 26px;
+    height: 60px;
+    font-weight: bold;
+    padding-left: 18px;
+    padding-right: 20px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-top: none;
+
+    align-items: center;
+    display: flex;
+}
+
+/* Раскрывающийся список Каталога */
+.catalog__list {
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    transition: opacity .3s;
+}
+
+/* Общие правила для ul */
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* Общие правила для li */
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Правила для элементов каталога */
+.catalog__link {
+    font-size: 26px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    align-items: center;
+    display: flex;
+}
+
+/* Правила для иконок в раскрывающемся списке */
+.catalog__link-img {
+    margin-right: 10px;
+    margin-top: -3px;
+}
+
+/* Правила для области подкатегорий */
+.catalog__subcatalog {
+    width: 867px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 280px;
+    top: 0;
+    height: auto;
+    padding: 20px;
+    transition: all .3s;
+}
+
+/* Правила для элементов подкатегорий */
+.collections_subcatalog {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Отступы внутри области подкатегорий */
+.collections_subcatalog_item {
+    margin: 5px;
+}
+
+/* Привила для заголовок подкатегорий */
+.collections_subcatalog_item > a {
+    font-size: large;
+    font-weight: 700;
+    color: green;
+}
+
+/* Раскрыващийся список при наведении на Каталог */
+.catalog__wrapper:hover > .catalog__list {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Раскрывыющийся список при наведении на категории Каталога */
+.catalog__item:hover .catalog__subcatalog {
+    opacity: 1;
+    visibility: visible;
+    left: 260px;
+}
+
+/* Правила для элементов подкатегорий */ 
+.catalog__subcatalog-link {
+    display: block;
+    position: relative;
+    font-size: 26px;
+    color: #111;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Правила для списка подкатегорий */
+.collections_subcatalog_item ul ul {
+    display: none;
+    position: absolute;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    background: #fafafa;
+    padding: 24px;
+    z-index: 10;
+    width: auto;
+    min-width: 300px;
+    margin-left: 50px;
+}
+
+/* Общий размер шрифта подкатегорий */
+.collections_subcatalog_item a {
+    font-size: 28px;
+}
+
+/* Раскрывающийся список при наведении на подкатегории */
+.collections_subcatalog_item ul li:hover > ul {
+    display: block;
+}
+
+/* Общее правило для span`ов  */
+span {
+    margin-left: 8px;
+}
+
+/* Правила для кнопки Выход */
+.log-out {
+    font-family: "Header";
+    color: white;
+    display: inherit;
+    margin-left: 150px;
+}
+
+/* Иконка для кнопки Выход */
+.log-out-logo {
+    margin-left: 5px;
+}
+
+/* Общее правило для абзацев */ 
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Общее правило для изображений */ 
+img {
+    border-style: none;
+}
+
+/* Изменение цвета при наведении на ссылки */
+a:hover {
+    color: #cb2d41;
+}
+
+/* END */
